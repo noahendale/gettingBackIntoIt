@@ -1,7 +1,3 @@
-console.log('hellp');
-
-console.log('fdlsa');
-
-console.log('third');
-
-console.log('fourth');
+$('.nav-headings h1:last-child').click(function(){
+	$('.dropdown').toggleClass('dropdown-display');
+});

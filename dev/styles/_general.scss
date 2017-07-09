@@ -1,6 +1,225 @@
+@import "variables";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
+
 body {
-	background: red;
-	font-size: 14px;
-	float: right;
-	color: black;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	letter-spacing: 1px;
+
+	h1, h2 {
+		font-weight: 300;
+		text-transform: uppercase;
+		color: white;
+	}
+
+	h1, nav h1 {
+		font-size: 0.9em;
+		color: white;
+	}
+
+	h2 {
+		font-size: 0.8em;
+	}
+
+	p {
+		font-weight: 100;
+	}
+
+	nav {
+		color: $nav-grey_secondary;
+		background-color: $nav-grey;
+		position: absolute;
+		right: 0;
+		left: 0;
+		.nav-headings {
+			display: -webkit-box;
+			display: flex;
+			-webkit-box-pack: justify;
+	        justify-content: space-between;
+			padding: 15px 10px;
+			position: relative;
+
+			h1 {
+				span {
+					margin-left: 10px;
+					color: $nav-grey_secondary;
+				}
+			}
+
+			h1:last-child {
+				cursor: pointer;
+			}
+		}
+		
+		.dropdown-display {
+			transform: translateY(0);
+		}
+
+		.dropdown {
+			display: block;
+			transition: all 1s;
+			background-color: $nav-dropdown_bg;
+			padding: 3em 2em 2em 2em;
+			position: relative;
+			max-height: 60vh;
+			overflow: scroll;
+			transform: translateY(-100vh);
+
+			.close {
+				position: absolute;
+				top: 0;
+				right: 0;
+				opacity: 0.25;
+				cursor: pointer;
+				background-size: 2.5em;
+				background: url('../../public/assets/close.svg') left top no-repeat;
+				height: 5em;
+				width: 5em;
+				transition: opacity 0.2s ease-in-out;
+				-webkit-transition: opacity 0.2s ease-in-out;
+				-ms-transition: opacity 0.2s ease-in-out;
+				z-index: 2;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+
+			.social {
+				margin: 25px 0;
+
+				a {
+					text-decoration: none;
+				}
+				i {
+					margin-right: 15px;
+					font-size: 1.4rem;
+					color: $nav-grey_tertiary;
+				}
+			}
+
+			p {
+				line-height: 1.5em;
+			}
+
+			form {
+				input, button, textarea {
+					box-sizing: border-box;
+					width: 100%;
+					appearance: none;
+					border: 0;
+					padding: 10px;
+					margin: 8px 0;
+				}
+
+				input:not([type="submit"]), textarea {
+					background-color: $form-element;
+				}
+
+				//doesn't work if you comma separate placeholder selectors :(
+				::-webkit-input-placeholder {
+					color: $placeholder;
+					font-weight: 100;
+					font-family: "Source Sans Pro", Helvetica, sans-serif;
+				}
+
+				::-moz-placeholder {
+					color: $placeholder;
+					font-weight: 100;
+					font-family: "Source Sans Pro", Helvetica, sans-serif;
+				}
+
+				:-ms-input-placeholder {
+					color: $placeholder;
+					font-weight: 100;
+					font-family: "Source Sans Pro", Helvetica, sans-serif;
+				}
+
+				input[type="submit"], button {
+					background-color: transparent;
+					color: white;
+					font-weight: 100;
+					font-family: "Source Sans Pro", Helvetica, sans-serif;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					font-size: 14px;
+					cursor: pointer;
+				}
+
+				input[type="submit"]{
+					background-color: $green;
+				}
+
+				button {
+					box-shadow: inset 0 0 0 2px #36383c;
+				}
+			}
+		}
+	}
+
+
+	main {
+		div {
+			border: 1px solid red;
+		}
+		.main-first {
+			background: url(images/img1-min.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		.main-second {
+			background: url(images/img2-min.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		.main-third {
+			background: url(images/img3-min.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		.main-fourth {
+			background: url(images/img4-min.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		.main-fifth {
+			background: url(images/img5-min.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		.main-sixth {
+			background: url(images/img6-min.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		.main-seventh {
+			background: url(images/img7-min.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		.main-eighth {
+			background: url(images/img8-min.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		.main-ninth {
+			background: url(images/img9-min.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		.main-tenth {
+			background: url(images/img10-min.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		.main-eleventh {
+			background: url(images/img11-min.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		.main-twelfth {
+			background: url(images/img12-min.jpg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	}
 }
